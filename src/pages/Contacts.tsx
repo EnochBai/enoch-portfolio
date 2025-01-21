@@ -95,66 +95,58 @@ export const Contact = () => {
       </div>
       <div className="pt-4 pb-8 w-1/2">
         <Fade direction="up" triggerOnce={true}>
-          <form
-            ref={form}
-            onSubmit={sendEmail}
-            noValidate
-            className="flex flex-col p-6 bg-gray-700 rounded-lg shadow-md max-w-md mx-auto"
-          >
-            <label
-              htmlFor="user_name"
-              className="text-sm font-medium text-gray-100 pb-1"
+          <div>
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="flex flex-col p-6 bg-gray-700 rounded-lg shadow-md max-w-md mx-auto"
             >
-              Name *
-            </label>
-            <input
-              type="text"
-              name="user_name"
-              id="user_name"
-              className="p-2 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none text-gray-800"
-              placeholder="Enter your name"
-              onChange={handleInputChange}
-            />
-
-            <label
-              htmlFor="user_email"
-              className="text-sm font-medium text-gray-100 pb-1 pt-3"
-            >
-              Email *
-            </label>
-            <input
-              type="text"
-              name="user_email"
-              id="user_email"
-              className="p-2 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none text-gray-800"
-              placeholder="Enter your email"
-              onChange={handleInputChange}
-            />
-
-            <label
-              htmlFor="message"
-              className="text-sm font-medium text-gray-100 pb-1 pt-3"
-            >
-              Message *
-            </label>
-            <textarea
-              name="message"
-              id="message"
-              className="p-2 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none text-gray-800"
-              placeholder="Write your message here"
-              onChange={handleInputChange}
-            />
-
-            <div className="pt-2 min-h-10">{renderMessage()}</div>
-
-            <div className="flex justify-center">
+              <label className="text-sm font-medium text-gray-100 pb-1">
+                Name *
+              </label>
               <input
-                type="submit"
-                value="Send"
-                className="py-2 px-4 bg-gray-900 text-white rounded-md shadow-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400 cursor-pointer"
+                type="text"
+                name="user_name"
+                id="user_name"
+                className="p-2 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none text-gray-800"
+                placeholder="Enter your name"
+                onChange={handleInputChange}
               />
-            </div>
-          </form>
+
+              <label className="text-sm font-medium text-gray-100 pb-1 pt-3">
+                Email *
+              </label>
+              <input
+                type="text"
+                name="user_email"
+                id="user_email"
+                className="p-2 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none text-gray-800"
+                placeholder="Enter your email"
+                onChange={handleInputChange}
+              />
+
+              <label className="text-sm font-medium text-gray-100 pb-1 pt-3">
+                Message *
+              </label>
+              <textarea
+                name="message"
+                id="message"
+                className="p-2 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none text-gray-800"
+                placeholder="Write your message here"
+                onChange={handleInputChange}
+              />
+
+              <div className="pt-2 min-h-10">{renderMessage()}</div>
+
+              <div className="flex justify-center">
+                <input
+                  type="submit"
+                  value="Send"
+                  className="py-2 px-4 bg-gray-900 text-white rounded-md shadow-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400 cursor-pointer"
+                />
+              </div>
+            </form>
+          </div>
         </Fade>
       </div>
     </>
