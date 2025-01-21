@@ -56,7 +56,7 @@ export const Contact = () => {
     emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
       () => {
         form.current?.reset();
-        setStatus("Sent Success!");
+        setStatus("Sent Successfully!");
         setTimeout(() => setStatus(null), 5000);
       },
       (error) => {
