@@ -6,6 +6,7 @@ import CircleButton from "../componets/CircleButton";
 import linkedinIcon from "../images/linkedin.png";
 import githubMark from "../images/github-mark.png";
 import email from "../images/email.png";
+import homeBg from "../images/homeBg.jpg";
 
 interface HomeProps {
   handleScrollToSection: (id: string) => void;
@@ -26,10 +27,17 @@ const Home: React.FC<HomeProps> = ({ handleScrollToSection }) => {
 
   return (
     <div
-      className="bg-[url(./images/HeaderBackground.jpg)] w-full h-screen flex items-center justify-center relative"
+      className="w-full h-screen flex items-center justify-center relative"
       id="home"
     >
-      <ParticlesBg color="#C0C0C0" type="cobweb" num={150} />
+      <img
+        src={homeBg}
+        alt="homeBg"
+        className="w-full h-full object-cover absolute z-5"
+      />
+      <div className="absolute w-full h-full">
+        <ParticlesBg color="#C0C0C0" type="cobweb" num={150} />
+      </div>
       <div className="text-center absolute">
         <Fade direction="down" triggerOnce={true}>
           <h1 className="text-4xl pb-4">Hello, I'm</h1>
