@@ -71,6 +71,14 @@ const GeneralPanel: React.FC<NavbarProps> = ({
               </li>
               <li>
                 <a
+                  onClick={() => handleScrollToSection("weatherReport")}
+                  className="hover:underline cursor-pointer"
+                >
+                  Weather
+                </a>
+              </li>
+              <li>
+                <a
                   onClick={() => handleScrollToSection("about")}
                   className="hover:underline cursor-pointer"
                 >
@@ -112,6 +120,17 @@ const GeneralPanel: React.FC<NavbarProps> = ({
                     className="hover:underline cursor-pointer block"
                   >
                     Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    onClick={() => {
+                      handleScrollToSection("weatherReport");
+                      setMenuOpen(false);
+                    }}
+                    className="hover:underline cursor-pointer block"
+                  >
+                    Weather
                   </a>
                 </li>
                 <li>
